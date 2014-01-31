@@ -1,3 +1,5 @@
 LICENSE
 README.*
 .gitmodules
+.gitignore
+.DS_Store
