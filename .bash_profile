@@ -103,3 +103,6 @@ export PATH="$HOME/.ghar/bin:$PATH"
 ### See http://stackoverflow.com/questions/16407995/psycopg2-image-not-found
 export DYLD_FALLBACK_LIBRARY_PATH="/Applications/Postgres.app/Contents/MacOS/lib:/usr/lib:$DYLD_LIBRARY_PATH"
 alias psql="(. ~/.profile; unset DYLD_FALLBACK_LIBRARY_PATH; psql)";
+
+# Source virtualenvwrapper
+source /usr/local/share/python/virtualenvwrapper.sh
