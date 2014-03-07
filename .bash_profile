@@ -125,5 +125,9 @@ export PATH="$HOME/.ghar/bin:$PATH"
 export DYLD_FALLBACK_LIBRARY_PATH="/Applications/Postgres.app/Contents/MacOS/lib:/usr/lib:$DYLD_LIBRARY_PATH"
 alias psql="(. ~/.profile; unset DYLD_FALLBACK_LIBRARY_PATH; psql)";
 
+# Source ~/.git-completion.sh and ~/.git-prompt.sh
+source ~/.git-completion.sh
+source ~/.git-prompt.sh
+
 # Source virtualenvwrapper
 source /usr/local/share/python/virtualenvwrapper.sh
