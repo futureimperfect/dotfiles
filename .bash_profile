@@ -131,3 +131,7 @@ source ~/.git-prompt.sh
 
 # Source virtualenvwrapper
 source /usr/local/share/python/virtualenvwrapper.sh
+
+# grep colors
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;35;40'
