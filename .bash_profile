@@ -32,7 +32,7 @@ bash_prompt() {
 	local Y='\[\033[0;33m\]'    # yellow
 	local B='\[\033[0;34m\]'    # blue
 	local M='\[\033[0;35m\]'    # magenta
-	local C='\[\033[0;36m\]'    # cyan
+	local C='\[\033[036m\]'     # cyan
 	local W='\[\033[0;37m\]'    # white
 						    
 	# empahsized (bolded) colors
@@ -124,7 +124,7 @@ export PATH="$HOME/.ghar/bin:$PATH"
 ### Added to resolve issues with psycopg2
 ### See http://stackoverflow.com/questions/16407995/psycopg2-image-not-found
 export DYLD_FALLBACK_LIBRARY_PATH="/Applications/Postgres.app/Contents/MacOS/lib:/usr/lib:$DYLD_LIBRARY_PATH"
-alias psql="(. ~/.profile; unset DYLD_FALLBACK_LIBRARY_PATH; psql)";
+alias psql="(. ~/.bash_profile; unset DYLD_FALLBACK_LIBRARY_PATH; psql)";
 
 # Source ~/.git-completion.sh and ~/.git-prompt.sh
 source ~/.git-completion.sh
