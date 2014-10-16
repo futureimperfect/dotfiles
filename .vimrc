@@ -174,8 +174,8 @@ command BackupOn  call BackupTurnOn()
 command BackupOff call BackupTurnOff()
 
 function Marked()
-    silent! !open -a Marked "%"
-    echo "Opened file in Marked.app"
+    silent! !open -a Marked\ 2 "%"
+    echo "Opened file in Marked 2.app"
 endfunction
 command Marked call Marked()
 
