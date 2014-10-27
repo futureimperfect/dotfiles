@@ -96,7 +96,7 @@ export RBENV_ROOT=/usr/local/var/rbenv
 # To enable shims and autocompletion add to your profile:
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 export CLICOLOR=1
 export OSA='osascript -e '
@@ -115,16 +115,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 ### /Applications/VMware Fusion.app/Contents/Library
 export PATH="$HOME/.vm-lib:$PATH"
 
-### Added to use the psql binary within the "Postgres.app" bundle
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
-
 ### Added `ghar` to $PATH.
 export PATH="$HOME/.ghar/bin:$PATH"
-
-### Added to resolve issues with psycopg2
-### See http://stackoverflow.com/questions/16407995/psycopg2-image-not-found
-export DYLD_FALLBACK_LIBRARY_PATH="/Applications/Postgres.app/Contents/MacOS/lib:/usr/lib:$DYLD_LIBRARY_PATH"
-alias psql="(. ~/.bash_profile; unset DYLD_FALLBACK_LIBRARY_PATH; psql)";
 
 # Source ~/.git-completion.sh and ~/.git-prompt.sh
 source ~/.git-completion.sh
