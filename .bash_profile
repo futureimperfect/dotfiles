@@ -99,6 +99,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export OSA='osascript -e '
 export SE='"AppleScript Editor"'
 
