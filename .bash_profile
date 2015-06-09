@@ -109,6 +109,8 @@ alias listen='sudo lsof -n -i | grep LISTEN'
 alias ose='open /Applications/Utilities/AppleScript\ Editor.app/'
 alias speedtest='echo "scale=2; `curl  --progress-bar -w "%{speed_download}" http://speedtest.wdc01.softlayer.com/downloads/test10.zip -o /dev/null` / 131072" | bc | xargs -I {} echo {} mbps'
 alias watcher="$HOME/scripts/watcher.sh"
+alias uids="$HOME/scripts/show_available_ldap_uids.sh"
+alias gids="$HOME/scripts/show_available_ldap_gids.sh"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
