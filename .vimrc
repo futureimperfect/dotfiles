@@ -1,16 +1,35 @@
 " James Barclay's vimrc file.
 "
 " Maintainer:   James Barclay <james@everythingisgray.com>
-" Last change:  2013-06-08
+" Last change:  2015-12-14
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'davidoc/taskpaper.vim'
+Plugin 'jacob-ogre/vim-syncr'
+Plugin 'plasticboy/vim-markdown'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+" Use the default filetype settings, so that mail gets 'tw' set to 72,
+" 'cindent' is on in C files, etc.
+" Also load indent files, to automatically do language-dependent indenting.
+filetype plugin indent on    " required
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
 endif
-
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -64,10 +83,6 @@ if has("autocmd")
 
   " Enable file type detection.
   filetype plugin on
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
 
   " Enable OmniCompletion
   set omnifunc=syntaxcomplete#Complete
@@ -181,3 +196,6 @@ command Marked call Marked()
 
 " Show line numbers
 set number
+
+" Disable folding
+let g:vim_markdown_folding_disabled=1
