@@ -199,3 +199,6 @@ set number
 
 " Disable folding
 let g:vim_markdown_folding_disabled=1
+
+" vim-syncr: Auto sync on :write
+autocmd BufWritePost * :Suplfil
