@@ -122,6 +122,9 @@ export PATH="$HOME/.vm-lib:$PATH"
 ### Added `ghar` to $PATH.
 export PATH="$HOME/.ghar/bin:$PATH"
 
+### Add ~/bin to $PATH
+export PATH=$PATH:~/bin
+
 # Source ~/.git-completion.sh and ~/.git-prompt.sh
 source ~/.git-completion.sh
 source ~/.git-prompt.sh
@@ -132,3 +135,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 # grep colors
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;35;40'
+
+# Make vim my $EDITOR
+export EDITOR=/usr/bin/vim
