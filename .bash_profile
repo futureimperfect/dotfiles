@@ -139,4 +139,7 @@ export GREP_COLOR='1;35;40'
 # Make vim my $EDITOR
 export EDITOR=/usr/bin/vim
 
+# Export ANDROID_HOME dir
+export ANDROID_HOME="/usr/local/opt/android-sdk"
+
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
