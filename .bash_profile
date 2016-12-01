@@ -111,6 +111,7 @@ alias speedtest='echo "scale=2; `curl  --progress-bar -w "%{speed_download}" htt
 alias watcher="$HOME/scripts/watcher.sh"
 alias uids="$HOME/scripts/show_available_ldap_uids.sh"
 alias gids="$HOME/scripts/show_available_ldap_gids.sh"
+alias apep="autopep8 --in-place --aggressive --aggressive"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
