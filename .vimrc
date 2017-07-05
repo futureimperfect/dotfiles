@@ -18,6 +18,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'davidoc/taskpaper.vim'
 Plugin 'jacob-ogre/vim-syncr'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -202,3 +203,6 @@ let g:vim_markdown_folding_disabled=1
 
 " vim-syncr: Auto sync on :write
 autocmd BufWritePost * :Suplfil
+
+" Run `goimports` with `gofmt`
+let g:go_fmt_command="goimports"

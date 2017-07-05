@@ -144,3 +144,14 @@ export EDITOR=/usr/bin/vim
 export ANDROID_HOME="/usr/local/opt/android-sdk"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "${HOME}/src/google-cloud-sdk/path.bash.inc" ]; then source "${HOME}/src/google-cloud-sdk/path.bash.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "${HOME}/src/google-cloud-sdk/completion.bash.inc" ]; then source "${HOME}/src/google-cloud-sdk/completion.bash.inc"; fi
+
+# Go stuff
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
