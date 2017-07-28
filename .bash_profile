@@ -155,3 +155,6 @@ if [ -f "${HOME}/src/google-cloud-sdk/completion.bash.inc" ]; then source "${HOM
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# YK4 SSH key stuff
+export OPENSC_LIBS=$(brew --prefix opensc)/lib
