@@ -158,3 +158,6 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # YK4 SSH key stuff
 export OPENSC_LIBS=$(brew --prefix opensc)/lib
+
+# Work stuff
+if [ -f "${HOME}/scripts/work.env" ]; then source "${HOME}/scripts/work.env"; fi
