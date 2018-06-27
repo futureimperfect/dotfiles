@@ -161,3 +161,6 @@ export OPENSC_LIBS=$(brew --prefix opensc)/lib
 
 # Work stuff
 if [ -f "${HOME}/scripts/work.env" ]; then source "${HOME}/scripts/work.env"; fi
+
+# Other stuff
+if [ -f "${HOME}/scripts/env.env" ]; then source "${HOME}/scripts/env.env"; fi
