@@ -127,8 +127,7 @@ export PATH="$HOME/.ghar/bin:$PATH"
 export PATH=$PATH:~/bin
 
 # Source ~/.git-completion.sh and ~/.git-prompt.sh
-source ~/.git-completion.sh
-source ~/.git-prompt.sh
+PREFIX="$(brew --prefix)" && [[ -r "${PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${PREFIX}/etc/profile.d/bash_completion.sh"
 
 # Source virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
@@ -164,3 +163,6 @@ if [ -f "${HOME}/scripts/work.env" ]; then source "${HOME}/scripts/work.env"; fi
 
 # Other stuff
 if [ -f "${HOME}/scripts/env.env" ]; then source "${HOME}/scripts/env.env"; fi
+
+# Added by Krypton
+export GPG_TTY=$(tty)
