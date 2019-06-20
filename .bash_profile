@@ -166,3 +166,6 @@ if [ -f "${HOME}/scripts/env.env" ]; then source "${HOME}/scripts/env.env"; fi
 
 # Added by Krypton
 export GPG_TTY=$(tty)
+
+# heroku autocomplete setup
+HEROKU_AC_BASH_SETUP_PATH=/Users/jbarclay/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
