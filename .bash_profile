@@ -129,6 +129,10 @@ export PATH=$PATH:~/bin
 # Source ~/.git-completion.sh and ~/.git-prompt.sh
 PREFIX="$(brew --prefix)" && [[ -r "${PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${PREFIX}/etc/profile.d/bash_completion.sh"
 
+if [ -f ~/git-completion.bash ]; then
+    . ~/git-completion.bash
+fi
+
 # Source virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
 
