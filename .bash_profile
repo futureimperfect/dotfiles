@@ -106,6 +106,7 @@ export SE='"AppleScript Editor"'
 alias cse='$OSA "tell application $SE to quit"'
 alias gist='gist -c'
 alias listen='sudo lsof -n -i | grep LISTEN'
+alias ll="ls -lah"
 alias ose='open /Applications/Utilities/AppleScript\ Editor.app/'
 alias speedtest='echo "scale=2; `curl  --progress-bar -w "%{speed_download}" http://speedtest.wdc01.softlayer.com/downloads/test10.zip -o /dev/null` / 131072" | bc | xargs -I {} echo {} mbps'
 alias watcher="$HOME/scripts/watcher.sh"
