@@ -176,3 +176,5 @@ export GPG_TTY=$(tty)
 HEROKU_AC_BASH_SETUP_PATH=/Users/jbarclay/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
+export PATH="$HOME/.cargo/bin:$PATH"
