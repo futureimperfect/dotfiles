@@ -178,3 +178,5 @@ HEROKU_AC_BASH_SETUP_PATH=/Users/jbarclay/Library/Caches/heroku/autocomplete/bas
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export PATH="$HOME/Library/Python/3.7/bin:$PATH"
