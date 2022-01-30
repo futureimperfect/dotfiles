@@ -111,8 +111,11 @@ alias ose='open /Applications/Utilities/AppleScript\ Editor.app/'
 alias speedtest='echo "scale=2; `curl  --progress-bar -w "%{speed_download}" http://speedtest.wdc01.softlayer.com/downloads/test10.zip -o /dev/null` / 131072" | bc | xargs -I {} echo {} mbps'
 alias apep="autopep8 --in-place --aggressive --aggressive"
 
-### Added `ghar` to $PATH.
+### Add `ghar` to $PATH and source its bash completion script.
 export PATH="$HOME/.ghar/bin:$PATH"
+if [ -f ~/.ghar/ghar-bash-completion.sh ]; then
+    . ~/.ghar/ghar-bash-completion.sh
+fi
 
 ### Add ~/bin to $PATH
 export PATH=$PATH:~/bin
