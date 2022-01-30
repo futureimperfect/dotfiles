@@ -91,7 +91,7 @@ bid() {
 }
 
 # To use Homebrew's directories rather than ~/.rbenv add to your profile:
-export RBENV_ROOT=/usr/local/var/rbenv
+export RBENV_ROOT="$(brew --prefix)"/var/rbenv
 
 # To enable shims and autocompletion add to your profile:
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -109,17 +109,7 @@ alias listen='sudo lsof -n -i | grep LISTEN'
 alias ll="ls -lah"
 alias ose='open /Applications/Utilities/AppleScript\ Editor.app/'
 alias speedtest='echo "scale=2; `curl  --progress-bar -w "%{speed_download}" http://speedtest.wdc01.softlayer.com/downloads/test10.zip -o /dev/null` / 131072" | bc | xargs -I {} echo {} mbps'
-alias watcher="$HOME/scripts/watcher.sh"
-alias uids="$HOME/scripts/show_available_ldap_uids.sh"
-alias gids="$HOME/scripts/show_available_ldap_gids.sh"
 alias apep="autopep8 --in-place --aggressive --aggressive"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-### Added `vmrun` to $PATH. ~/.vm-lib is symlinked to
-### /Applications/VMware Fusion.app/Contents/Library
-export PATH="$HOME/.vm-lib:$PATH"
 
 ### Added `ghar` to $PATH.
 export PATH="$HOME/.ghar/bin:$PATH"
@@ -135,7 +125,7 @@ if [ -f ~/git-completion.bash ]; then
 fi
 
 # Source virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
+source "$(brew --prefix)"/bin/virtualenvwrapper.sh
 
 # grep colors
 export GREP_OPTIONS='--color=auto'
@@ -172,12 +162,15 @@ if [ -f "${HOME}/scripts/env.env" ]; then source "${HOME}/scripts/env.env"; fi
 # Added by Krypton
 export GPG_TTY=$(tty)
 
-# heroku autocomplete setup
-HEROKU_AC_BASH_SETUP_PATH=/Users/jbarclay/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
-
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+
+# Homebrew on Apple Silicon installs to /opt/homebrew/bin instead of /usr/local/bin.
+CPU=$(uname -p)
+if [[ "$CPU" == "arm" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
