@@ -148,6 +148,12 @@ if [ -f "${HOME}/src/google-cloud-sdk/path.bash.inc" ]; then source "${HOME}/src
 # The next line enables shell command completion for gcloud.
 if [ -f "${HOME}/src/google-cloud-sdk/completion.bash.inc" ]; then source "${HOME}/src/google-cloud-sdk/completion.bash.inc"; fi
 
+# The next line updates PATH for the Google Cloud SDK when installed via Homebrew.
+if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ]; then source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"; fi
+
+# The next line enables shell command completion for gcloud when installed via Homebrew.
+if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ]; then source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"; fi
+
 # Go stuff
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
