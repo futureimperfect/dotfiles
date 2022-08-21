@@ -177,6 +177,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+export PATH="$HOME/Library/Python/3.10/bin:$PATH"
 
 # Homebrew on Apple Silicon installs to /opt/homebrew/bin instead of /usr/local/bin.
 CPU=$(uname -p)
