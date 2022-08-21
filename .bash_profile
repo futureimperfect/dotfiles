@@ -175,6 +175,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
+export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 export PATH="$HOME/Library/Python/3.10/bin:$PATH"
