@@ -90,6 +90,12 @@ bid() {
     [[ -z $bundleid || $bundleid = "" ]] && echo "Error getting bundle ID for \"$@\"" || echo "$location: $bundleid"
 }
 
+# Homebrew on Apple Silicon installs to /opt/homebrew/bin instead of /usr/local/bin.
+CPU=$(uname -p)
+if [[ "$CPU" == "arm" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # To use Homebrew's directories rather than ~/.rbenv add to your profile:
 export RBENV_ROOT="$(brew --prefix)"/var/rbenv
 
@@ -120,11 +126,15 @@ fi
 ### Add ~/bin to $PATH
 export PATH=$PATH:~/bin
 
-# Source ~/.git-completion.sh and ~/.git-prompt.sh
+# Source bash_completion.sh, ~/.git-completion.sh, and ~/.git-prompt.sh
 PREFIX="$(brew --prefix)" && [[ -r "${PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${PREFIX}/etc/profile.d/bash_completion.sh"
 
 if [ -f ~/git-completion.bash ]; then
     . ~/git-completion.bash
+fi
+
+if [ -f ~/git-prompt.bash ]; then
+    . ~/git-prompt.bash
 fi
 
 # Source virtualenvwrapper
@@ -179,9 +189,3 @@ export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 export PATH="$HOME/Library/Python/3.10/bin:$PATH"
-
-# Homebrew on Apple Silicon installs to /opt/homebrew/bin instead of /usr/local/bin.
-CPU=$(uname -p)
-if [[ "$CPU" == "arm" ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
