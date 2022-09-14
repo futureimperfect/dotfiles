@@ -129,6 +129,10 @@ export PATH=$PATH:~/bin
 # Source bash_completion.sh, ~/.git-completion.sh, and ~/.git-prompt.sh
 PREFIX="$(brew --prefix)" && [[ -r "${PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${PREFIX}/etc/profile.d/bash_completion.sh"
 
+PREFIX="$(brew --prefix)" && [[ -r "${PREFIX}/etc/bash_completion.d/git-completion.bash" ]] && . "${PREFIX}/etc/bash_completion.d/git-completion.bash"
+
+PREFIX="$(brew --prefix)" && [[ -r "${PREFIX}/etc/bash_completion.d/git-prompt.sh" ]] && . "${PREFIX}/etc/bash_completion.d/git-prompt.sh"
+
 if [ -f ~/git-completion.bash ]; then
     . ~/git-completion.bash
 fi
