@@ -168,11 +168,6 @@ if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path
 # The next line enables shell command completion for gcloud when installed via Homebrew.
 if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ]; then source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"; fi
 
-# Go stuff
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
 # YK4 SSH key stuff
 export OPENSC_LIBS=$(brew --prefix opensc)/lib
 
