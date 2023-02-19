@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/vim-syncr"]
 	path = .vim/bundle/vim-syncr
 	url = https://github.com/jacob-ogre/vim-syncr
+[submodule ".vim/bundle/starlark.vim"]
+	path = .vim/bundle/starlark.vim
+	url = git@github.com:cappyzawa/starlark.vim.git

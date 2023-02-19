@@ -19,6 +19,7 @@ Plugin 'davidoc/taskpaper.vim'
 Plugin 'jacob-ogre/vim-syncr'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'fatih/vim-go'
+Plugin 'cappyzawa/starlark.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
