@@ -1,37 +1,30 @@
 " James Barclay's vimrc file.
 "
 " Maintainer:   James Barclay <james@everythingisgray.com>
-" Last change:  2015-12-14
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'davidoc/taskpaper.vim'
-Plugin 'jacob-ogre/vim-syncr'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'fatih/vim-go'
-Plugin 'cappyzawa/starlark.vim'
+Plug 'davidoc/taskpaper.vim'
+Plug 'jacob-ogre/vim-syncr'
+Plug 'plasticboy/vim-markdown'
+Plug 'fatih/vim-go'
+Plug 'cappyzawa/starlark.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-" Use the default filetype settings, so that mail gets 'tw' set to 72,
-" 'cindent' is on in C files, etc.
-" Also load indent files, to automatically do language-dependent indenting.
-filetype plugin indent on    " required
+let g:coc_global_extensions = [
+    \ 'coc-eslint',
+    \ 'coc-prettier',
+    \ 'coc-tsserver'
+\ ]
 
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
+call plug#end()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
