@@ -198,3 +198,5 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+export PATH="$(brew --prefix)/opt/python@3.13/libexec/bin:$PATH"
