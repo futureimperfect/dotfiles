@@ -8,21 +8,14 @@ filetype off                  " required
 
 call plug#begin()
 
-Plug 'davidoc/taskpaper.vim'
-Plug 'jacob-ogre/vim-syncr'
-Plug 'plasticboy/vim-markdown'
-Plug 'fatih/vim-go'
 Plug 'cappyzawa/starlark.vim'
-Plug 'pangloss/vim-javascript'
+Plug 'davidoc/taskpaper.vim'
+Plug 'fatih/vim-go'
+Plug 'jacob-ogre/vim-syncr'
 Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-let g:coc_global_extensions = [
-    \ 'coc-eslint',
-    \ 'coc-prettier',
-    \ 'coc-tsserver'
-\ ]
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
