@@ -156,7 +156,7 @@ export ANDROID_HOME="/usr/local/opt/android-sdk"
 
 # iTerm2 Shell Integration settings
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+test -e ~/.iterm2_shell_integration.bash && source ~/.iterm2_shell_integration.bash || true
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "${HOME}/src/google-cloud-sdk/path.bash.inc" ]; then source "${HOME}/src/google-cloud-sdk/path.bash.inc"; fi
