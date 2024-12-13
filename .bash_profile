@@ -142,7 +142,8 @@ if [ -f ~/git-prompt.bash ]; then
 fi
 
 # Source virtualenvwrapper
-source "$(brew --prefix)"/bin/virtualenvwrapper.sh
+BREW_PREFIX="$(brew --prefix)"
+test -e "${BREW_PREFIX}/bin/virtualenvwrapper.sh" && source "${BREW_PREFIX}/bin/virtualenvwrapper.sh" || true
 
 # grep colors
 export GREP_OPTIONS='--color=auto'
