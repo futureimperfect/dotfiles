@@ -1,0 +1,4 @@
+theme = Elegant
+unfocused-split-opacity = 0.5
+window-padding-x = 10
+window-padding-y = 10
